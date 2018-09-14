@@ -53,17 +53,16 @@ npm run deploy
 
 Beaucoup de frameworks et libs côté front-end ont permis aux développeurs d'être plus productifs, tout en construisant des applications plus volumineuses et élégantes, sans que leurs performances ne soient lésées.
 
-Côté back-end avec NodeJS, les frameworks les plus utilisés ne proposent pas de solutions aux principaux besoins récurrents des développeurs, il faut piocher dans l'écosystème NPM pour trouver son bonheur et quand des problèmes surviennent pour faire évoluer l'architecture, les développeurs se retrouvent seuls face à npm.
+Côté back-end avec NodeJS, les frameworks les plus utilisés ne proposent pas de solutions aux principaux besoins récurrents des développeurs, il faut piocher dans l'écosystème pour trouver son bonheur et quand des problèmes surviennent pour faire évoluer l'architecture, les développeurs se retrouvent seuls face à npm.
 
-#### L'existant
-
-Le plus populaire est Express (mais aussi hapi, fastify, koa...). Pb : ils laissent bcp le choix au niveau de l'archi (unopinionated)
+Il existe bien des frameworks comme loopback qui proposent de répondre aux besoins récurrents des développeurs mais leur approche et leur configuration peuvent faire peur et mener à la création d'usine à gaz magiques.
 
 #### Problèmes rencontrés
 
 - des contrôleurs de partout dans une arborescense de fichiers non normée
 - difficilement testable (extraction des callback dans des méthodes de classe dédiée + utilisation async await) mais pas suffisant à notre goût (toujours req, res, app...)
 - on confie tout aux middlewares (auth, logging, data transformation & validation, exception handlers...)
+- absence typage, couplage fort avec un framework particulier,
 
 **Heureusement, NestJS est arrivé !!!**
 
@@ -73,7 +72,7 @@ Le plus populaire est Express (mais aussi hapi, fastify, koa...). Pb : ils laiss
 
 - Opinionated (cette-fois ci) et tiré du monde d'Angular + Spring Boot (pour les adeptes, vous devriez reconnaître un bon nombre de similitude ;))
 - Basé sur Express
-- Ecrit en typescript
+- Ecrit en Typescript
 - SOLID principles
 - Propose une réelle architecture applicative et simplifie la mise en place du DDD
 - Finit le couplage fort à Express (req, res, app) + mocking de ces objets dans les tests
@@ -157,7 +156,7 @@ Grâce (encore) aux custom providers, on peut, au besoin, remplacer certains com
 
 En résumé, Nest est un cadre structurant encourageant les bonnes pratiques, framework agnostique, portant une architecture modulaire, offrant de l'injection de dépendances et de puissants composants, accompagné d'intégrations élégantes, le tout écrit avec/pour TypeScript.
 
-## Liens utiles
+## Liens utiles (merci à eux)
 
 - https://docs.nestjs.com
 - https://github.com/FormidableLabs/spectacle
