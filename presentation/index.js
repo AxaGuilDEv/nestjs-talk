@@ -83,7 +83,7 @@ export default class Presentation extends React.Component {
             margin="60px 0 0 0"
             bold
           >
-            Meilleur Dev de France 2018
+            {process.env.CONFERENCE_NAME}
           </Text>
           <Text textColor="quaternary" textSize="0.7em" margin="24px 0 0 0">
             @cyril_lakech & @lauthieb
@@ -941,7 +941,7 @@ export default class Presentation extends React.Component {
             margin="20px 0 0 0"
             bold
           >
-            Meilleur Dev de France 2018
+            {process.env.CONFERENCE_NAME}
           </Text>
           <Text textColor="quaternary" textSize="0.7em" margin="24px 0 0 0">
             @cyril_lakech & @lauthieb
