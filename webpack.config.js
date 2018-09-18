@@ -2,6 +2,7 @@
 
 var path = require("path");
 var webpack = require("webpack");
+var Dotenv = require("dotenv-webpack");
 
 module.exports = {
   devtool: "cheap-module-source-map",
@@ -18,7 +19,8 @@ module.exports = {
   },
   plugins: [
     new webpack.NamedModulesPlugin(),
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new Dotenv()
   ],
   module: {
     loaders: [
